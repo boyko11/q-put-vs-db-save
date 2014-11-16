@@ -25,7 +25,7 @@ public class HibernateService {
 		configuration.setProperty("hibernate.dialect",
 				"org.hibernate.dialect.MySQLDialect");
 		configuration.setProperty("hibernate.connection.url",
-				"jdbc:mysql://localhost:3306/create_record_perf_test_db");
+				"jdbc:mysql://localhost:3306/simulation");
 		configuration.setProperty("hibernate.connection.username", "root");
 		configuration.setProperty("hibernate.connection.password", "root+1");
 		//configuration.setProperty("hibernate.hbm2ddl.auto", "create-drop");
@@ -79,7 +79,7 @@ public class HibernateService {
 	
 	static {
 		init();
-		bootstrapData();
+		//bootstrapData();
 	}
 
 }

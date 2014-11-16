@@ -10,8 +10,8 @@ import boyko.simulation.service.impl.DonkeyServiceQueueImpl;
 public class CreateRecordBenchmarkSimulation {
 	
 	private static int threadCompleteCount = 0;
-	//private static final DonkeyService donkeyService = new DonkeyServiceQueueImpl();
-	private static final DonkeyService donkeyService = new DonkeyServiceDBImpl();
+	private static final DonkeyService donkeyService = new DonkeyServiceQueueImpl();
+	//private static final DonkeyService donkeyService = new DonkeyServiceDBImpl();
 	
 	public static void main(String[] args) {
 		
