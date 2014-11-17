@@ -31,6 +31,22 @@ public class HibernateService {
 		//configuration.setProperty("hibernate.hbm2ddl.auto", "create-drop");
 		//configuration.setProperty("hibernate.show_sql", "true");
 		//configuration.setProperty("hibernate.format_sql", "true");
+		
+		configuration.setProperty("hibernate.connection.provider_class", "org.hibernate.connection.C3P0ConnectionProvider");
+		configuration.setProperty("hibernate.c3p0.min_size", "5");
+		configuration.setProperty("hibernate.c3p0.max_size", "50");
+		configuration.setProperty("hibernate.c3p0.timeout", "1000");
+		configuration.setProperty("hibernate.c3p0.max_statements", "50");
+		configuration.setProperty("hibernate.c3p0.max_statements", "50");
+		configuration.setProperty("hibernate.c3p0.idle_test_period", "1000");
+		
+		configuration.setProperty("connection.provider_class", "org.hibernate.connection.C3P0ConnectionProvider");
+		configuration.setProperty("c3p0.min_size", "5");
+		configuration.setProperty("c3p0.max_size", "50");
+		configuration.setProperty("c3p0.timeout", "1000");
+		configuration.setProperty("c3p0.max_statements", "50");
+		configuration.setProperty("c3p0.max_statements", "50");
+		configuration.setProperty("c3p0.idle_test_period", "1000");
 
 		configuration.addPackage("boyko.simulation.model")
 			.addAnnotatedClass(Donkey.class);

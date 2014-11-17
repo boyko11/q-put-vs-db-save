@@ -1,14 +1,18 @@
 package boyko.simulation.service.impl;
 
 import java.util.Queue;
-import java.util.concurrent.ConcurrentLinkedQueue;
 
 import boyko.simulation.model.Donkey;
 import boyko.simulation.service.DonkeyService;
 
 public class DonkeyServiceQueueImpl implements DonkeyService {
 
-	static Queue<Donkey> queue = new ConcurrentLinkedQueue<Donkey>();
+	private Queue<Donkey> queue;
+	
+	public DonkeyServiceQueueImpl(Queue<Donkey> queue) {
+
+		this.queue = queue;
+	}
 	
 	@Override
 	public void create(Donkey donkey) {
