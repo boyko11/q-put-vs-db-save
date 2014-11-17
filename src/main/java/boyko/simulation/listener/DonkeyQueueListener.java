@@ -11,7 +11,7 @@ public class DonkeyQueueListener {
 	
 	private Queue<Donkey> queue;
 	private int id;
-	private static int maxNumberOfInsertsInBatch = 1000;
+	private static int maxNumberOfInsertsInBatch = 5000;
 	private DonkeyJDBCService donkeyJdbcService;
 	
 	public DonkeyQueueListener(Queue<Donkey> queue, int id) {
@@ -31,7 +31,7 @@ public class DonkeyQueueListener {
 				
 				System.out.println("Listener " + id + " sleeping.");
 				
-				try { Thread.sleep(10000);} catch (Exception e) { e.printStackTrace(); }
+				try { Thread.sleep(1000);} catch (Exception e) { e.printStackTrace(); }
 				
 				System.out.println("Listener " + id + " awake.");
 				

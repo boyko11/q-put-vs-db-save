@@ -20,7 +20,6 @@ public class CreateRecordBenchmarkSimulation {
 	
 	public static void main(String[] args) {
 		
-		createAndStartQueueListeners();
 		
 		long startTime = System.currentTimeMillis();
 		
@@ -30,7 +29,7 @@ public class CreateRecordBenchmarkSimulation {
 					
 					System.out.println("Thread " + i);
 					
-					IntStream.rangeClosed(1, 10000).forEach(j-> {
+					IntStream.rangeClosed(1, 10003).forEach(j-> {
 						
 						Donkey newDonkey = new Donkey(String.valueOf(j), String.valueOf(j), j);
 						donkeyService.create(newDonkey);
@@ -43,6 +42,8 @@ public class CreateRecordBenchmarkSimulation {
 			}
 		
 		);
+		
+		createAndStartQueueListeners();
 		
 		int whileCount = 0;
 		while( threadCompleteCount != 10 ) {
