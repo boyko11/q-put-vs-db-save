@@ -48,9 +48,10 @@ public class DonkeyQueueListener {
 				
 				if(donkey != null) {
 					donkeysToBeInsertedInThisBatch.add(donkey);
+					numberOfDonkeysToBeInserted++;
 				}
 				
-				System.out.println("Number of donkeys to be inserted  in this batch: " + numberOfDonkeysToBeInserted);
+				System.out.println("Number of donkeys to be inserted  in this batch: " + (numberOfDonkeysToBeInserted - 1));
 				
 				donkeyJdbcService.createBatch(donkeysToBeInsertedInThisBatch);
 				
